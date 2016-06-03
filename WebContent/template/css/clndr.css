@@ -1,0 +1,182 @@
+.cal1{
+	background:#fff;
+
+}
+.clndr{
+}
+.noselect {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls {
+     position: relative;
+  	color: #FFF;
+	font-size: 1em;
+	font-weight:400;
+	text-transform: uppercase;
+	padding: 22px 20px;
+	text-align: center;
+	background-color:#dd4b6a;
+
+}
+.cal1 .clndr .clndr-controls .month {
+   text-align:center;
+   font-size:16px;
+   font-weight: bold;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button { 
+  position:absolute;
+  right:20px;
+  top:19px;
+  width:30px;
+  height:30px;
+  text-indent: -4000px;
+  background: url(../images/arrow-right.png) no-repeat 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover {
+  cursor: default;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button { 
+   position:absolute;
+   left:20px;
+   top:19px;
+   width:30px;
+   height:30px;
+  text-indent: -4000px;
+  background: url(../images/arrow-left.png) no-repeat 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive:hover {
+   cursor: default;
+}
+.cal1 .clndr .clndr-table {
+  table-layout: fixed;
+  width:90%;
+  margin:0 auto;
+}
+.cal1 .clndr .clndr-table .header-days {
+   font-size:1em;
+   font-weight:500;
+   border-bottom: 1px solid #ebeced;
+}
+.cal1 .clndr .clndr-table .header-days .header-day {
+  vertical-align: middle;
+  text-align: center;
+  color: #777c80;
+  font-weight:bold;
+}
+.cal1 .clndr .clndr-table tr {
+    height:38px;
+}
+.cal1 .clndr .clndr-table tr td {
+  vertical-align: top;
+}
+.cal1 .clndr .clndr-table tr .day {
+  width: 100%;
+  height: inherit;
+  color: #424448;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+.cal1 .clndr .clndr-table tr .day.today {
+  border-radius: 100%;
+  	 background:#424448;
+	 color: #FFF !important;
+	 position:relative;
+}
+
+.cal1 .clndr .clndr-table tr .day.today:hover {
+  	color: #FFF;
+  	background:#dd4b6a;
+}
+.cal1 .clndr .clndr-table tr .day:hover{
+	color: #FFF;
+  background: #dd4b6a;
+  border-radius: 100%;
+}
+.cal1 .clndr .clndr-table tr .day.today.event {
+     background:#4fc1e9;
+	 color: #FFF;
+}
+.day.today.event:hover{
+	background:#096e9a;
+	color:#FFF;
+}
+.cal1 .clndr .clndr-table tr .day .day-contents {
+  box-sizing: border-box;
+  text-align:center;
+  cursor:pointer;
+ font-weight:bold;
+ font-size:16px;
+}
+.cal1 .clndr .clndr-table tr .empty,
+.cal1 .clndr .clndr-table tr .adjacent-month {
+  width: 100%;
+  height: inherit;
+  color: #989898;
+  font-weight: 300;
+}
+@media all and (max-width:1024px){
+	.cal1 .clndr .clndr-table tr .day.today:after{
+		left:20px;
+	}
+.cal1 .clndr .clndr-table tr .day .day-contents {
+  font-size: 13px;
+}
+}
+@media all and (max-width:800px){
+	.cal1 .clndr .clndr-table tr .day.today:after{
+		left:13px;
+	}
+}
+@media all and (max-width:640px){
+	.cal1 .clndr .clndr-table tr{
+		height:35px;
+	}
+	
+	.cal1 .clndr .clndr-table tr .day.today:after{
+		left:10px;
+	}
+}
+@media all and (max-width:480px){
+.cal1 .clndr .clndr-table tr {
+  height: 51px;
+}
+.cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button {
+  position: absolute;
+  left: 30px;
+  }
+	.cal1 .clndr .clndr-table tr .day.today:after{
+		left:24px;
+	}
+}
+@media all and (max-width:320px) {
+	.cal1 .clndr .clndr-table tr {
+		height: 35px;
+	}
+	.cal1 .clndr .clndr-table tr .day.today:after{
+		left:15px;
+	}
+}

@@ -1,0 +1,49 @@
+create database tender;
+
+use tender;
+
+
+create table tenderdb(
+ 	tid int primary key auto_increment,
+ 	tname varchar(255),
+ 	opening timestamp,
+ 	closing timestamp,
+	minbid double,
+ 	tdesc longtext
+);
+
+
+create table vendor (
+	vid int primary key auto_increment,
+	name varchar(255),
+	address longtext,
+	phone varchar(255),
+	email varchar(255),
+	tinno varchar(255),
+	servicetax varchar(255),
+	ref longtext
+);
+
+
+
+create table bid (
+	vid int,
+	tid int,
+	bid int primary key auto_increment,
+	bidamount double,
+	bidtime timestamp,
+	selectedbit varchar(10)
+	
+);
+
+create table admin (
+	id int primary key auto_increment,
+	username varchar(255),
+	password varchar(255)
+	
+);	
+
+alter table bid add foreign key(vid) references vendor(vid);
+alter table bid add foreign key(tid) references tenderdb(tid);
+
+alter table vendor add password varchar(255);

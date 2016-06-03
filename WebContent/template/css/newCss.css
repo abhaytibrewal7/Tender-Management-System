@@ -1,0 +1,21 @@
+.shop-info h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #424448;
+  font-weight: bold;
+  line-height: 1.35em;
+}
+
+.shop-info p {
+  font-size: 13px;
+  margin: 5px 0 0 0;
+  color: #0F0A0A;
+  font-weight: bold;
+}
+
+.shop-info h4 a {
+  font-size: 20px;
+  color: #424448;
+  background: none;
+  padding: 0;
+}
